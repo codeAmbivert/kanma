@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useHydrateCartStore } from "@/helper/cartStore";
 import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../../../../redux/store";
@@ -36,18 +36,24 @@ const ProductsScreen = () => {
       </div>
 
       <div className="w-full flex justify-center items-center h-full flex-wrap gap-10 pt-4 mx-auto">
-        {products.map((item: any) => {
-          return (
-            <div key={item?._id}>
-              <ProductCard
-                data={item}
-                onClick={() =>
-                  item?.stockQty > 0 && updateCartItem(item, "add")
-                }
-              />
-            </div>
-          );
-        })}
+        {products && products.length > 0 ? (
+          products.map((item: any) => {
+            return (
+              <div key={item?._id}>
+                <ProductCard
+                  data={item}
+                  onClick={() =>
+                    item?.stockQty > 0 && updateCartItem(item, "add")
+                  }
+                />
+              </div>
+            );
+          })
+        ) : (
+          <div className="text-center text-[#222222] text-lg font-semibold">
+            No products available yet
+          </div>
+        )}
       </div>
     </div>
   );

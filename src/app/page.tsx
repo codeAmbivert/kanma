@@ -90,7 +90,7 @@ export default function Home() {
         </div>
 
         <div className="w-full flex justify-center items-center h-full flex-wrap gap-10 pt-4 mx-auto">
-          {products.map((item: any) => {
+          {products && products.length > 0 ? products.map((item: any) => {
             return (
               <div key={item?._id}>
                 <ProductCard
@@ -101,7 +101,11 @@ export default function Home() {
                 />
               </div>
             );
-          })}
+          }) : (
+            <div className="w-full h-full flex justify-center items-center">
+              <p>No products available yet</p>
+            </div>
+          )}
         </div>
       </section>
     </Layout>
