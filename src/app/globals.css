@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #646c70;
+}
+
+.hide-scrollbar {
+  overflow: auto;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For IE and Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 4s ease-out;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.rooms > * .css-i4bv87-MuiSvgIcon-root {
+  color: #5a5a5a !important;
+}
+
+/* fieldset.MuiOutlinedInput-notchedOutline {
+  border-color: transparent;
+}
+
+.Mui-focused fieldset.MuiOutlinedInput-notchedOutline {
+  border-color: transparent;
+} */
+.rooms > * .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
+  /* color: transparent !important; */
+  font-weight: 600;
+}
+
+.my-selected:not([disabled]) {
+  background-color: #c8a008;
+  color: white;
+}
+
+.slide-transition {
+  transition: background-image 1s ease-in-out;
+}
