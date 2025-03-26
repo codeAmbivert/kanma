@@ -18,7 +18,7 @@ const navItems = [
   // { text: "Home", route: "/"
   { text: "Products", route: "/products" },
   // { text: "Categories", route: "/categories" },
-  { text: "About", route: "about" },
+  // { text: "About", route: "about" },
 ];
 
 // Create a component to render the navigation items

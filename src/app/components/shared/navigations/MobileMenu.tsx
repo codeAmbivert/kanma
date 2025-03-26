@@ -1,7 +1,7 @@
 import { useRouter } from "next/navigation";
 import { Button } from "../buttons/Button";
 import Link from "next/link";
-import { useHydrateUser } from "@/helper/user";   
+import { useHydrateUser } from "@/helper/user";
 
 const MenuModal = ({
   isOpen,
@@ -15,7 +15,7 @@ const MenuModal = ({
   const links = [
     { text: "Home", link: "/" },
     // { text: "Categories", link: "/" },
-    { text: "About", link: "/" },
+    // { text: "About", link: "/" },
   ];
 
   const handleClose = () => {
